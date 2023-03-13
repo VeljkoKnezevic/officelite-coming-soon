@@ -1,1 +1,137 @@
 @use "../utils/" as u;
+
+.date {
+  padding: u.rem(100) u.rem(24);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @include u.breakpoint(xlarge) {
+    padding-inline: u.rem(165);
+    align-items: flex-start;
+    padding-block-start: u.rem(82);
+    padding-block-end: u.rem(91);
+  }
+
+  &__date {
+    text-transform: uppercase;
+    color: var(--white);
+
+    &--blue {
+      color: var(--dark-purple);
+    }
+  }
+
+  &__time {
+    display: flex;
+    gap: u.rem(13);
+    margin-block-start: u.rem(18);
+
+    @include u.breakpoint(medium) {
+      margin-block-start: u.rem(8);
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #333950;
+    border-radius: 4px;
+
+    &:nth-child(1) {
+      padding: u.rem(11) u.rem(15) u.rem(10) u.rem(16);
+
+      @include u.breakpoint(medium) {
+        padding: u.rem(16) u.rem(13) u.rem(13) u.rem(16);
+      }
+
+      @include u.breakpoint(xlarge) {
+        padding: u.rem(16) u.rem(13) u.rem(17) u.rem(17);
+      }
+    }
+
+    &:nth-child(2) {
+      padding: u.rem(11) u.rem(16) u.rem(12) u.rem(17);
+
+      @include u.breakpoint(medium) {
+        padding: u.rem(16) u.rem(16) u.rem(17) u.rem(14);
+      }
+
+      @include u.breakpoint(xlarge) {
+        padding: u.rem(16) u.rem(16) u.rem(14) u.rem(17);
+      }
+    }
+
+    &:nth-child(3) {
+      padding: u.rem(11) u.rem(16) u.rem(10) u.rem(17);
+
+      @include u.breakpoint(medium) {
+        padding: u.rem(17) u.rem(16) u.rem(16) u.rem(15);
+      }
+      @include u.breakpoint(xlarge) {
+        padding: u.rem(16);
+      }
+    }
+
+    &:nth-child(4) {
+      padding: u.rem(11) u.rem(17) u.rem(10) u.rem(18);
+
+      @include u.breakpoint(medium) {
+        padding: u.rem(16) u.rem(19) u.rem(17) u.rem(18);
+      }
+    }
+
+    &__number {
+      font-weight: 700;
+      font-size: u.rem(32);
+      line-height: u.rem(48);
+      color: var(--white);
+
+      @include u.breakpoint(medium) {
+        font-size: u.rem(56);
+        line-height: u.rem(48);
+      }
+    }
+
+    &__unit {
+      font-weight: 700;
+      font-size: u.rem(12);
+      line-height: u.rem(28);
+      color: var(--white);
+      mix-blend-mode: normal;
+      opacity: 0.5;
+
+      @include u.breakpoint(medium) {
+        font-size: u.rem(16);
+        line-height: u.rem(28);
+        margin-block-start: u.rem(5.28);
+      }
+    }
+  }
+
+  &__button {
+    background: var(--dark-purple);
+    border-radius: u.rem(28);
+    font-family: "Kumbh Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: u.rem(16);
+    line-height: u.rem(28);
+    color: var(--white);
+    border: none;
+    margin-block-start: u.rem(54);
+    padding: u.rem(14) u.rem(41) u.rem(14) u.rem(40);
+
+    @include u.breakpoint(medium) {
+      margin-block-start: u.rem(48);
+    }
+
+    @include u.breakpoint(xlarge) {
+      align-self: flex-end;
+      position: absolute;
+      margin-block-start: 0;
+    }
+  }
+}
