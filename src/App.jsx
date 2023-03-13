@@ -1,3 +1,4 @@
+import Cards from "./components/Cards";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import "./styles/styles.scss";
@@ -8,40 +9,7 @@ function App() {
       <Header />
       <main>
         <Hero />
-        <div className="cards">
-          <div className="card">
-            <h2 className="card__heading">Basic</h2>
-            <div className="card__price">Free</div>
-            <p className="card__users">Up to 5 users for free</p>
-            <p className="card__benefit">Basic document collaboration</p>
-            <p className="card__benefit">2 gb storage</p>
-            <p className="card__benefit">Great security and support</p>
-            <button type="button" className="card__button">
-              Try for Free
-            </button>
-          </div>
-          <div className="card">
-            <h2 className="card__heading">Pro</h2>
-            <div className="card__price">$9.99</div> <p className="card__users">Per user, billed monthly</p>
-            <p className="card__benefit">All essential integrations</p>
-            <p className="card__benefit">50 gb storage</p>
-            <p className="card__benefit">More control and insights</p>
-            <button type="button" className="card__button">
-              Try for Free
-            </button>
-          </div>
-          <div className="card">
-            <h2 className="card__heading">Ultimate</h2>
-            <div className="card__price">$19.99</div>
-            <p className="card__users">Per user, billed monthly</p>
-            <p className="card__benefit">Robust work management</p>
-            <p className="card__benefit">100 gb</p>
-            <p className="card__benefit">storage VIP support</p>
-            <button type="button" className="card__button">
-              Try for Free
-            </button>
-          </div>
-        </div>
+        <Cards />
       </main>
 
       <footer className="footer">

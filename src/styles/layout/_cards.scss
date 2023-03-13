@@ -1,1 +1,208 @@
 @use "../utils/" as u;
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: u.rem(32);
+  margin-block-start: u.rem(100);
+  margin-inline: u.rem(23);
+
+  @include u.breakpoint(medium) {
+    margin-inline-end: u.rem(40);
+    gap: u.rem(24);
+    margin-block-start: u.rem(140);
+  }
+
+  @include u.breakpoint(xlarge) {
+    flex-direction: row;
+    justify-content: center;
+    gap: u.rem(30);
+    margin-block-start: u.rem(184);
+  }
+
+  #basic {
+    padding-inline: u.rem(54);
+
+    @include u.breakpoint(medium) {
+      padding-inline-end: u.rem(68);
+    }
+
+    @include u.breakpoint(xlarge) {
+      padding-inline: u.rem(64);
+    }
+  }
+
+  #ultimate {
+    padding-inline: u.rem(65);
+
+    @include u.breakpoint(medium) {
+      padding-inline-end: u.rem(91);
+    }
+
+    @include u.breakpoint(xlarge) {
+      padding-inline: u.rem(76);
+    }
+  }
+
+  #pro {
+    padding-inline: u.rem(69);
+    background: #5175ff;
+    box-shadow: 0px 50px 50px -25px rgba(75, 92, 154, 0.247159);
+    border-radius: 13px;
+
+    background-image: url(../../assets/home/bg-pattern-pricing.svg);
+    background-repeat: no-repeat;
+    background-position: top -370px center;
+
+    @include u.breakpoint(medium) {
+      padding-inline-end: u.rem(100);
+
+      background-position: left -280px top -300px;
+    }
+
+    @include u.breakpoint(xlarge) {
+      padding-inline: u.rem(80);
+      background-position: top -370px center;
+    }
+
+    .card {
+      &__heading {
+        color: #ffffff;
+      }
+      &__price {
+        color: #ffffff;
+      }
+
+      &__users {
+        color: #ffffff;
+      }
+
+      &__benefit {
+        color: #ffffff;
+        opacity: 0.75;
+      }
+
+      &__button {
+        color: #5175ff;
+      }
+    }
+  }
+
+  #ultimate,
+  #basic {
+    background: #ffffff;
+    box-shadow: 0px 50px 50px -25px rgba(75, 92, 154, 0.247159);
+    border-radius: 13px;
+
+    .card {
+      &__heading {
+        color: #333950;
+      }
+
+      &__price {
+        color: #333950;
+      }
+
+      &__users {
+        color: #333950;
+      }
+
+      &__benefit {
+        color: #747b95;
+      }
+
+      &__button {
+        background: rgba(81, 117, 255, 0.15);
+
+        color: #5175ff;
+      }
+    }
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-block: u.rem(40);
+
+    @include u.breakpoint(medium) {
+      align-items: flex-start;
+      padding-block: u.rem(48);
+      padding-inline-start: u.rem(48);
+    }
+
+    @include u.breakpoint(xlarge) {
+      align-items: center;
+      padding-block: u.rem(40);
+    }
+
+    &__price {
+      font-weight: 700;
+      font-size: u.rem(56);
+      line-height: u.rem(64);
+      margin-block-start: u.rem(40);
+
+      @include u.breakpoint(medium) {
+        margin-block-start: u.rem(16);
+      }
+
+      @include u.breakpoint(xlarge) {
+        margin-block-start: u.rem(40);
+      }
+    }
+
+    &__users {
+      margin-block-start: u.rem(8);
+
+      @include u.breakpoint(medium) {
+        margin-block-start: u.rem(4);
+      }
+
+      @include u.breakpoint(xlarge) {
+        margin-block-start: u.rem(8);
+      }
+    }
+
+    &__benefits {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: u.rem(16);
+      margin-block-start: u.rem(56);
+
+      @include u.breakpoint(medium) {
+        position: absolute;
+        margin-block-start: 0;
+        align-self: flex-end;
+        align-items: flex-start;
+      }
+
+      @include u.breakpoint(xlarge) {
+        position: static;
+        justify-content: center;
+        align-items: center;
+        margin-block-start: u.rem(56);
+      }
+    }
+
+    &__button {
+      margin-block-start: u.rem(32);
+      border-radius: u.rem(28);
+      border: none;
+      padding: u.rem(14) u.rem(42.5) u.rem(14) u.rem(40.5);
+      font-family: "Kumbh Sans";
+      font-weight: 700;
+      font-size: u.rem(16);
+      line-height: u.rem(28);
+
+      @include u.breakpoint(medium) {
+        margin-block-start: u.rem(24);
+      }
+
+      @include u.breakpoint(xlarge) {
+        margin-block-start: u.rem(32);
+      }
+    }
+  }
+}
