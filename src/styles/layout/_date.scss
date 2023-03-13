@@ -6,12 +6,19 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-block-start: u.rem(900);
+
+  @include u.breakpoint(medium) {
+    padding-block-start: u.rem(600);
+  }
 
   @include u.breakpoint(xlarge) {
-    padding-inline: u.rem(165);
+    padding-inline: 0;
     align-items: flex-start;
-    padding-block-start: u.rem(82);
+    padding-block-start: u.rem(330);
     padding-block-end: u.rem(91);
+    max-width: u.rem(1110);
+    margin: 0 auto;
   }
 
   &__date {

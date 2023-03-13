@@ -2,4 +2,23 @@
 
 .footer {
   background: #25293a;
+  height: u.rem(1300);
+  margin-top: u.rem(-800);
+
+  background-image: url(../../../assets/home/bg-pattern-footer.svg);
+  background-position: top -300px left -830px;
+  background-repeat: no-repeat;
+
+  @include u.breakpoint(medium) {
+    height: u.rem(1000);
+    margin-top: u.rem(-500);
+    background-position: top -300px left -640px;
+  }
+
+  @include u.breakpoint(xlarge) {
+    height: u.rem(603);
+    margin-top: u.rem(-260);
+
+    background-position: top -570px left -640px;
+  }
 }
