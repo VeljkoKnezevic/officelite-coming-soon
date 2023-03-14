@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import HeroImg from "../../assets/home/illustration-charts.svg";
 
 export default function Hero() {
@@ -10,9 +11,11 @@ export default function Hero() {
           Say goodbye to inefficient juggling of multiple apps, teams, and projects. Officelite is the new collaboration
           platform built with an intuitive interface to improve productivity.
         </p>
-        <button className="hero__button" type="button">
-          Get Started
-        </button>
+        <Link to="/sign-up">
+          <button className="hero__button" type="button">
+            Get Started
+          </button>
+        </Link>
       </div>
     </section>
   );

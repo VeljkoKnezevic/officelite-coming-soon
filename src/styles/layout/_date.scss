@@ -26,6 +26,8 @@
     color: var(--white);
 
     &--blue {
+      text-transform: uppercase;
+
       color: var(--dark-purple);
     }
   }

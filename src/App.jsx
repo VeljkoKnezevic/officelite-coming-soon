@@ -12,7 +12,6 @@ function App() {
         <Hero />
         <Cards />
       </main>
-
       <footer className="footer">
         <Date />
       </footer>

@@ -4,17 +4,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-block-start: u.rem(46);
+  padding-block-start: u.rem(46);
 
   @include u.breakpoint(medium) {
-    margin-inline-start: u.rem(39);
-    margin-block-start: u.rem(72);
+    padding-inline-start: u.rem(39);
+    padding-block-start: u.rem(72);
     justify-content: start;
   }
 
   @include u.breakpoint(xlarge) {
-    margin-inline-start: u.rem(165);
-    margin-block-start: u.rem(81);
+    padding-inline-start: u.rem(165);
+    padding-block-start: u.rem(81);
   }
 
   // background-image: url(../../../assets/home/bg-pattern-header.svg);
