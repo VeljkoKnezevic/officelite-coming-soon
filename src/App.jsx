@@ -1,5 +1,5 @@
 import Cards from "./components/Cards";
-import Date from "./components/Date";
+import DateComponent from "./components/DateComponent";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import "./styles/styles.scss";
@@ -13,7 +13,7 @@ function App() {
         <Cards />
       </main>
       <footer className="footer">
-        <Date />
+        <DateComponent />
       </footer>
     </>
   );

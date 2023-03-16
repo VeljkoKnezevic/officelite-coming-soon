@@ -1,4 +1,4 @@
-import Date from "./Date";
+import DateComponent from "./DateComponent";
 import Header from "./Header";
 
 export default function Signup() {
@@ -12,20 +12,20 @@ export default function Signup() {
             Easily manage your projects. Get on the list and receive in-app perks available only to early subscribers.
             We are moving into final development and getting ready for official launch soon.
           </p>
-          <Date />
+          <DateComponent />
         </div>
         <form className="form">
           <input className="form__input" type="text" placeholder="Name" />
           <input className="form__input" type="email" placeholder="Email Address" />
           <select className="form__input" id="pricing" name="pricing">
             <option className="form__options" value="basic">
-              Basic Pack <span className="form__options--price">Free</span>
+              Basic Pack Free
             </option>
             <option className="form__options" value="pro">
-              Pro Pack <span className="form__options--price">$9.99</span>
+              Pro Pack $9.99
             </option>
             <option className="form__options" value="ultimate">
-              Ultimate Pack <span className="form__options--price">$19.99</span>
+              Ultimate Pack $19.99
             </option>
           </select>
           <input className="form__input" type="text" placeholder="Phone Number" />
