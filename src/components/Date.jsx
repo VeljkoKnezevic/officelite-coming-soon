@@ -1,4 +1,4 @@
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export default function Date() {
   const location = useLocation();
@@ -30,7 +30,7 @@ export default function Date() {
       </div>
 
       <button className={location.pathname === "/sign-up" ? "signup__date__button" : "date__button"} type="button">
-        Get Started
+        <Link to="/sign-up">Get Started</Link>
       </button>
     </section>
   );

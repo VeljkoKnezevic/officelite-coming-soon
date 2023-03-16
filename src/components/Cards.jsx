@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Cards() {
   return (
     <div className="cards">
@@ -10,9 +12,11 @@ export default function Cards() {
           <p className="card__benefit">2 gb storage</p>
           <p className="card__benefit">Great security and support</p>
         </div>
-        <button type="button" className="card__button">
-          Try for Free
-        </button>
+        <Link to="/sign-up">
+          <button type="button" className="card__button">
+            Try for Free
+          </button>
+        </Link>
       </div>
       <div className="card" id="pro">
         <h2 className="card__heading">Pro</h2>
@@ -22,9 +26,11 @@ export default function Cards() {
           <p className="card__benefit">50 gb storage</p>
           <p className="card__benefit">More control and insights</p>
         </div>
-        <button type="button" className="card__button">
-          Try for Free
-        </button>
+        <Link to="/sign-up">
+          <button type="button" className="card__button">
+            Try for Free
+          </button>
+        </Link>
       </div>
       <div className="card" id="ultimate">
         <h2 className="card__heading">Ultimate</h2>
@@ -35,9 +41,11 @@ export default function Cards() {
           <p className="card__benefit">100 gb</p>
           <p className="card__benefit">storage VIP support</p>
         </div>
-        <button type="button" className="card__button">
-          Try for Free
-        </button>
+        <Link to="/sign-up">
+          <button type="button" className="card__button">
+            Try for Free
+          </button>
+        </Link>
       </div>
     </div>
   );

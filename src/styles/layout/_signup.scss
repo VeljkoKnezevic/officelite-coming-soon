@@ -7,6 +7,7 @@
   &__container {
     @include u.breakpoint(xlarge) {
       display: flex;
+      justify-content: space-between;
     }
   }
 
@@ -19,8 +20,8 @@
   &__heading {
     text-align: center;
     color: var(--grey);
-    margin-block-start: u.rem(-140);
     padding-inline: u.rem(24);
+    margin-block-start: u.rem(-140);
 
     @include u.breakpoint(medium) {
       padding-inline: u.rem(97);
