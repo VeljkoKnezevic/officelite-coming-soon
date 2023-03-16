@@ -2,21 +2,26 @@
 
 .header {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   padding-block-start: u.rem(46);
+  background-image: url(../../../assets/home/bg-pattern-header.svg);
+  background-repeat: no-repeat;
+  background-size: 458px 458px;
+  background-position: left -42px top -160px;
+  height: 300px;
+  position: relative;
 
   @include u.breakpoint(medium) {
     padding-inline-start: u.rem(39);
     padding-block-start: u.rem(72);
     justify-content: start;
+    background-size: 666px 666px;
+    background-position: right -100px top -164px;
   }
 
   @include u.breakpoint(xlarge) {
     padding-inline-start: u.rem(165);
     padding-block-start: u.rem(81);
   }
-
-  // background-image: url(../../../assets/home/bg-pattern-header.svg);
-  // background-repeat: no-repeat;
 }

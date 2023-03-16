@@ -1,19 +1,54 @@
 @use "../utils/" as u;
 
 .signup {
-  padding-inline: u.rem(24);
   background: #fafafa;
+  height: 100%;
+
+  &__container {
+    @include u.breakpoint(xlarge) {
+      display: flex;
+    }
+  }
+
+  &__content {
+    @include u.breakpoint(xlarge) {
+      margin-inline-start: u.rem(165);
+    }
+  }
 
   &__heading {
     text-align: center;
     color: var(--grey);
-    margin-block-start: u.rem(80);
+    margin-block-start: u.rem(-140);
+    padding-inline: u.rem(24);
+
+    @include u.breakpoint(medium) {
+      padding-inline: u.rem(97);
+      margin-block-start: u.rem(-90);
+    }
+
+    @include u.breakpoint(xlarge) {
+      margin-block-start: u.rem(-50);
+      padding-inline: 0;
+      text-align: start;
+    }
   }
 
   &__para {
     text-align: center;
     color: var(--light-grey);
     margin-block-start: u.rem(16);
+    padding-inline: u.rem(24);
+    @include u.breakpoint(medium) {
+      padding-inline: u.rem(97);
+      margin-block-start: u.rem(24);
+    }
+
+    @include u.breakpoint(xlarge) {
+      padding-inline: 0;
+      margin-block-start: u.rem(24);
+      text-align: start;
+    }
   }
 
   &__date {
@@ -22,6 +57,15 @@
     align-items: center;
     justify-content: center;
     margin-block-start: u.rem(64);
+    padding-inline: u.rem(24);
+
+    @include u.breakpoint(medium) {
+      padding-inline: u.rem(160);
+    }
+    @include u.breakpoint(xlarge) {
+      padding-inline: 0;
+      align-items: flex-start;
+    }
 
     &__date {
       text-transform: uppercase;
@@ -52,6 +96,9 @@
   }
 
   .form {
+    margin-inline: u.rem(24);
+    position: relative;
+    z-index: 1;
     background: #ffffff;
     box-shadow: 0px 50px 50px -25px rgba(75, 92, 154, 0.247159);
     border-radius: u.rem(13);
@@ -60,6 +107,18 @@
     flex-direction: column;
     padding: u.rem(24);
     gap: u.rem(24);
+
+    @include u.breakpoint(medium) {
+      margin-inline: u.rem(160);
+    }
+
+    @include u.breakpoint(xlarge) {
+      margin-inline-end: u.rem(165);
+      margin-inline-start: u.rem(125);
+      margin-block-start: u.rem(-90);
+      min-width: u.rem(445);
+      padding: u.rem(40) u.rem(42) u.rem(51) u.rem(43);
+    }
 
     &__input {
       height: u.rem(45);
@@ -72,15 +131,25 @@
       line-height: u.rem(28);
       color: #747b95;
       opacity: 0.5;
+
+      &:focus {
+        color: #333950;
+        opacity: 1;
+      }
     }
+
     #pricing {
+      appearance: none;
+      background-color: transparent;
       background-color: var(--white);
-      color: #333950;
       opacity: 1;
       font-weight: 700;
+      background-image: url(../../../assets/sign-up/icon-arrow-down.svg);
+      background-repeat: no-repeat;
+      background-position: right 20px top 5px;
 
-      .form-prices {
-        //fix
+      &::placeholder {
+        color: #333950;
       }
     }
 
@@ -96,6 +165,37 @@
       line-height: u.rem(28);
       color: var(--white);
       margin-block-start: u.rem(54);
+
+      @include u.breakpoint(xlarge) {
+        margin-block-start: u.rem(40);
+      }
+    }
+  }
+
+  &__footer {
+    background: #25293a;
+
+    width: 100%;
+    height: u.rem(320);
+    margin-block-start: u.rem(-233);
+    background-image: url(../../../assets/home/bg-pattern-footer.svg);
+    background-size: u.rem(375) u.rem(320);
+    background-repeat: no-repeat;
+    background-position: top left;
+
+    @include u.breakpoint(medium) {
+      height: u.rem(380);
+    }
+
+    @include u.breakpoint(xlarge) {
+      position: absolute;
+      height: 100vh;
+      width: u.rem(420);
+      right: 0;
+      top: 0;
+      margin: 0;
+      background-size: u.rem(1440) u.rem(1440);
+      background-position: top -483px left -555px;
     }
   }
 }

@@ -6,11 +6,11 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin-block-start: u.rem(80);
+  margin-block-start: u.rem(-140);
 
   @include u.breakpoint(medium) {
     flex-direction: row;
-    margin-block-start: u.rem(104);
+    margin-block-start: u.rem(-104);
   }
 
   &__image {
