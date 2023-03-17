@@ -146,7 +146,7 @@
       &--error {
         border-bottom-color: var(--red);
         color: var(--red);
-        background-image: url(../../../assets/sign-up/icon-cross.svg);
+        background-image: url(../assets/sign-up/icon-cross.svg);
         background-repeat: no-repeat;
         background-position: top u.rem(4) right u.rem(20);
 
@@ -267,7 +267,7 @@
     width: 100%;
     height: u.rem(320);
     margin-block-start: u.rem(-233);
-    background-image: url(../../assets/home/bg-pattern-footer.svg);
+    background-image: url(../assets/home/bg-pattern-footer.svg);
     background-size: u.rem(375) u.rem(320);
     background-repeat: no-repeat;
     background-position: top left;
