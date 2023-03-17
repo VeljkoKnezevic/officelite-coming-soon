@@ -64,7 +64,7 @@
     background: var(--dark-purple);
     box-shadow: 0px 25px 25px -10px rgba(63, 91, 194, 0.247159);
     border-radius: u.rem(28);
-    font-family: "Kumbh Sans";
+    font-family: u.$font;
     font-weight: 700;
     font-size: u.rem(16);
     line-height: u.rem(28);
@@ -74,7 +74,7 @@
 
     &:hover {
       cursor: pointer;
-      background: #829cff;
+      background: var(--light-purple);
     }
   }
 }

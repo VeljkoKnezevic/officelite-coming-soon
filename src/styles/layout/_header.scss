@@ -7,9 +7,9 @@
   padding-block-start: u.rem(46);
   background-image: url(../../../assets/home/bg-pattern-header.svg);
   background-repeat: no-repeat;
-  background-size: 458px 458px;
-  height: 300px;
-  background-position: left -42px top -160px;
+  background-size: u.rem(458) u.rem(458);
+  height: u.rem(300);
+  background-position: left u.rem(-42) top u.rem(-160);
 
   position: relative;
 
@@ -17,8 +17,8 @@
     padding-inline-start: u.rem(39);
     padding-block-start: u.rem(72);
     justify-content: start;
-    background-size: 666px 666px;
-    background-position: right -100px top -164px;
+    background-size: u.rem(666) u.rem(666);
+    background-position: right u.rem(-100) top u.rem(-164);
   }
 
   @include u.breakpoint(xlarge) {

@@ -133,13 +133,13 @@
       font-weight: 400;
       font-size: u.rem(16);
       line-height: u.rem(28);
-      color: #333950;
+      color: var(--dark-grey);
 
       &::placeholder {
         color: rgba(116, 123, 149, 0.5);
       }
       &:focus {
-        color: #333950;
+        color: var(--dark-grey);
         opacity: 1;
       }
 
@@ -148,7 +148,7 @@
         color: var(--red);
         background-image: url(../../../assets/sign-up/icon-cross.svg);
         background-repeat: no-repeat;
-        background-position: top 4px right 20px;
+        background-position: top u.rem(4) right u.rem(20);
 
         &::placeholder {
           color: var(--red);
@@ -163,12 +163,12 @@
         border-bottom: 1px solid rgba(116, 123, 149, 0.5);
         padding-inline-start: u.rem(16);
         padding-block-end: u.rem(16);
-        font-family: "Kumbh Sans";
+        font-family: u.$font;
         font-style: normal;
         font-weight: 700;
-        font-size: 16px;
-        line-height: 28px;
-        color: #333950;
+        font-size: u.rem(16);
+        line-height: u.rem(28);
+        color: var(--dark-grey);
 
         &:hover {
           cursor: pointer;
@@ -180,9 +180,9 @@
       }
 
       &__dropdown-indicator {
-        padding-inline-end: 20px;
+        padding-inline-end: u.rem(20);
         svg {
-          fill: #5175ff;
+          fill: var(--dark-purple);
         }
       }
 
@@ -191,17 +191,17 @@
         background: #ffffff;
         border: 1px solid rgba(51, 57, 80, 0.153273);
         box-shadow: 0px 50px 50px -25px rgba(75, 92, 154, 0.747077);
-        border-radius: 8px;
+        border-radius: u.rem(8);
         margin-block-start: u.rem(5);
       }
 
       &__option {
-        font-family: "Kumbh Sans";
+        font-family: u.$font;
         font-style: normal;
         font-weight: 700;
-        font-size: 16px;
-        line-height: 28px;
-        color: #333950;
+        font-size: u.rem(16);
+        line-height: u.rem(28);
+        color: var(--grey);
         border-block-end: 1px solid rgba(116, 123, 149, 0.25);
         padding-block-end: u.rem(16);
         padding-block-start: u.rem(16);
@@ -211,15 +211,15 @@
           background-repeat: no-repeat;
 
           &:nth-child(1) {
-            background-position: top 10px right 5px;
+            background-position: top u.rem(10) right u.rem(5);
           }
 
           &:nth-child(2) {
-            background-position: top 25px right 5px;
+            background-position: top u.rem(25) right u.rem(5);
           }
 
           &:nth-child(3) {
-            background-position: top 22px right 5px;
+            background-position: top u.rem(22) right u.rem(5);
           }
         }
 
@@ -238,11 +238,11 @@
     }
 
     &__button {
-      background: #5175ff;
-      border-radius: 28px;
+      background: var(--dark-purple);
+      border-radius: u.rem(28);
       border: none;
-      padding: 14px 0;
-      font-family: "Kumbh Sans";
+      padding: u.rem(14) 0;
+      font-family: u.$font;
       font-style: normal;
       font-weight: 700;
       font-size: u.rem(16);
@@ -256,13 +256,13 @@
 
       &:hover {
         cursor: pointer;
-        background: #829cff;
+        background: var(--light-purple);
       }
     }
   }
 
   &__footer {
-    background: #25293a;
+    background: var(--dark-grey);
 
     width: 100%;
     height: u.rem(320);
@@ -284,7 +284,7 @@
       top: 0;
       margin: 0;
       background-size: u.rem(1440) u.rem(1440);
-      background-position: top -483px left -555px;
+      background-position: top u.rem(-483) left u.rem(-555);
     }
   }
 }

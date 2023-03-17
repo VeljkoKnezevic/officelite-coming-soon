@@ -18,7 +18,7 @@
     padding-block-start: u.rem(330);
     padding-block-end: u.rem(91);
     max-width: u.rem(1110);
-    margin: 0 auto;
+    margin-inline: auto;
   }
 
   &__date {
@@ -46,8 +46,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: #333950;
-    border-radius: 4px;
+    background: var(--grey);
+    border-radius: u.rem(4);
 
     &:nth-child(1) {
       padding: u.rem(11) u.rem(15) u.rem(10) u.rem(16);
@@ -109,7 +109,6 @@
       font-size: u.rem(12);
       line-height: u.rem(28);
       color: var(--white);
-      mix-blend-mode: normal;
       opacity: 0.5;
 
       @include u.breakpoint(medium) {
@@ -127,7 +126,7 @@
   &__button {
     background: var(--dark-purple);
     border-radius: u.rem(28);
-    font-family: "Kumbh Sans";
+    font-family: u.$font;
     font-style: normal;
     font-weight: 700;
     font-size: u.rem(16);
@@ -148,7 +147,7 @@
     }
 
     &:hover {
-      background: #829cff;
+      background: var(--light-purple);
       cursor: pointer;
     }
   }

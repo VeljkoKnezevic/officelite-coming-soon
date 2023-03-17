@@ -1,24 +1,24 @@
 @use "../utils/" as u;
 
 .footer {
-  background: #25293a;
+  background: var(--dark-grey);
   height: u.rem(1300);
   margin-top: u.rem(-800);
 
   background-image: url(../../../assets/home/bg-pattern-footer.svg);
-  background-position: top -300px left -830px;
+  background-position: top u.rem(-300) left u.rem(-830);
   background-repeat: no-repeat;
 
   @include u.breakpoint(medium) {
     height: u.rem(1000);
     margin-top: u.rem(-500);
-    background-position: top -300px left -640px;
+    background-position: top u.rem(-300) left u.rem(-640);
   }
 
   @include u.breakpoint(xlarge) {
     height: u.rem(603);
     margin-top: u.rem(-260);
 
-    background-position: top -570px left -640px;
+    background-position: top u.rem(-570) left u.rem(-640);
   }
 }
