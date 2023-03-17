@@ -8,6 +8,8 @@
     @include u.breakpoint(xlarge) {
       display: flex;
       justify-content: space-between;
+      max-width: u.rem(1500);
+      margin-inline: auto;
     }
   }
 
@@ -127,30 +129,111 @@
       border-bottom: 1px solid rgba(116, 123, 149, 0.5);
       padding-inline-start: u.rem(16);
       padding-block-end: u.rem(16);
+      font: u.$font;
       font-weight: 400;
       font-size: u.rem(16);
       line-height: u.rem(28);
-      color: #747b95;
-      opacity: 0.5;
+      color: #333950;
 
+      &::placeholder {
+        color: rgba(116, 123, 149, 0.5);
+      }
       &:focus {
         color: #333950;
         opacity: 1;
       }
+
+      &--error {
+        border-bottom-color: var(--red);
+        color: var(--red);
+        background-image: url(../../../assets/sign-up/icon-cross.svg);
+        background-repeat: no-repeat;
+        background-position: top 4px right 20px;
+
+        &::placeholder {
+          color: var(--red);
+        }
+      }
     }
 
-    #pricing {
-      appearance: none;
-      background-color: transparent;
-      background-color: var(--white);
-      opacity: 1;
-      font-weight: 700;
-      background-image: url(../../../assets/sign-up/icon-arrow-down.svg);
-      background-repeat: no-repeat;
-      background-position: right 20px top 5px;
-
-      &::placeholder {
+    .react-select {
+      &__control {
+        height: u.rem(45);
+        border: none;
+        border-bottom: 1px solid rgba(116, 123, 149, 0.5);
+        padding-inline-start: u.rem(16);
+        padding-block-end: u.rem(16);
+        font-family: "Kumbh Sans";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 28px;
         color: #333950;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      &__indicator-separator {
+        display: none;
+      }
+
+      &__dropdown-indicator {
+        padding-inline-end: 20px;
+        svg {
+          fill: #5175ff;
+        }
+      }
+
+      &__menu {
+        padding: u.rem(24) u.rem(39) u.rem(24) u.rem(32);
+        background: #ffffff;
+        border: 1px solid rgba(51, 57, 80, 0.153273);
+        box-shadow: 0px 50px 50px -25px rgba(75, 92, 154, 0.747077);
+        border-radius: 8px;
+        margin-block-start: u.rem(5);
+      }
+
+      &__option {
+        font-family: "Kumbh Sans";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 28px;
+        color: #333950;
+        border-block-end: 1px solid rgba(116, 123, 149, 0.25);
+        padding-block-end: u.rem(16);
+        padding-block-start: u.rem(16);
+
+        &--is-selected {
+          background-image: url(../../../assets/sign-up/icon-check.svg);
+          background-repeat: no-repeat;
+
+          &:nth-child(1) {
+            background-position: top 10px right 5px;
+          }
+
+          &:nth-child(2) {
+            background-position: top 25px right 5px;
+          }
+
+          &:nth-child(3) {
+            background-position: top 22px right 5px;
+          }
+        }
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        &:nth-child(1) {
+          padding-block-start: 0;
+        }
+        &:nth-child(3) {
+          border-block-end: none;
+          padding-block-end: 0;
+        }
       }
     }
 
@@ -169,6 +252,11 @@
 
       @include u.breakpoint(xlarge) {
         margin-block-start: u.rem(40);
+      }
+
+      &:hover {
+        cursor: pointer;
+        background: #829cff;
       }
     }
   }

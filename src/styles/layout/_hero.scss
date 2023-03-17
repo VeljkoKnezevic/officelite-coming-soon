@@ -71,5 +71,10 @@
     color: var(--white);
     border: none;
     padding: u.rem(14) u.rem(41);
+
+    &:hover {
+      cursor: pointer;
+      background: #829cff;
+    }
   }
 }

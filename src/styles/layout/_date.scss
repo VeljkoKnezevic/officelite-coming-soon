@@ -146,5 +146,10 @@
       position: absolute;
       margin-block-start: 0;
     }
+
+    &:hover {
+      background: #829cff;
+      cursor: pointer;
+    }
   }
 }
