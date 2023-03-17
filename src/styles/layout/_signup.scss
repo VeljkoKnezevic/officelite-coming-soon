@@ -207,7 +207,7 @@
         padding-block-start: u.rem(16);
 
         &--is-selected {
-          background-image: url(../../../assets/sign-up/icon-check.svg);
+          background-image: url(../assets/sign-up/icon-check.svg);
           background-repeat: no-repeat;
 
           &:nth-child(1) {
@@ -267,7 +267,7 @@
     width: 100%;
     height: u.rem(320);
     margin-block-start: u.rem(-233);
-    background-image: url(../../../assets/home/bg-pattern-footer.svg);
+    background-image: url(../../assets/home/bg-pattern-footer.svg);
     background-size: u.rem(375) u.rem(320);
     background-repeat: no-repeat;
     background-position: top left;
