@@ -41,10 +41,11 @@ export default function DateComponent() {
           <div className="date__card__unit">Sec</div>
         </div>
       </div>
-
-      <button className={location.pathname === "/sign-up" ? "signup__date__button" : "date__button"} type="button">
-        <Link to="/sign-up">Get Started</Link>
-      </button>
+      <Link to="/sign-up">
+        <button className={location.pathname === "/sign-up" ? "signup__date__button" : "date__button"} type="button">
+          Get Started
+        </button>
+      </Link>
     </section>
   );
 }
